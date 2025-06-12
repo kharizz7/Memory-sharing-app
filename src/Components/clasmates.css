@@ -1,0 +1,92 @@
+.classmates-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f9f3f3, #ffe6f0, #e6f7ff);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-title {
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 2.5em;
+  color: #ff4d94;
+  text-shadow: 2px 2px 5px #ff99cc;
+  margin-bottom: 40px;
+}
+
+.classmates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  width: 100%;
+  max-width: 1000px;
+  justify-items: center;
+  padding: 0 10px;
+}
+
+.classmate-card-link {
+  text-decoration: none;
+  width: 100%;
+  max-width: 200px;
+}
+
+.classmate-card {
+  background: #fff0f5;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 2px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.classmate-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.classmate-image {
+  width: 140px;
+  height: 160px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.classmate-name {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 1.2em;
+  color: #d147a3;
+  /* user-select: none; */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 2em;
+  }
+
+  .classmates-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+  }
+
+  .classmate-card {
+    padding: 5px;
+  }
+
+  .classmate-image {
+    width: 140px;
+    height: 160px;
+  }
+
+  .classmate-name {
+    font-size: 1em;
+  }
+}
