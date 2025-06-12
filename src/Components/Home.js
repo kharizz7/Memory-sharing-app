@@ -22,14 +22,14 @@ function Home() {
   const memoryImages = [image1, image2, image3, image4, image5];
 
   useEffect(() => {
-    // Automatically check login state
+    
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
       }
     });
 
-    return () => unsubscribe(); // Cleanup on unmount
+    return () => unsubscribe(); 
   }, []);
 
   const handleWriteMemory = async () => {
